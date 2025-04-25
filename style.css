@@ -3,7 +3,11 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-}   
+} 
+
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color:#111;
@@ -64,6 +68,60 @@
     min-height: 100vh;
 }
 
+.body-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 2rem;
+}
+
+.body-form .text-content{
+    padding: 2rem 3.5rem;
+    margin: 1.2rem;
+    color:var(--secondary-color);
+    width: 80%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.body-form .text-content h1{
+    font-size: 3.5rem;
+    color: blueviolet;
+    position: relative;
+    line-height: 3.6rem;
+    margin: 1.5rem;
+    font-weight: 600;
+}
+
+
+.body-form .form-info .form-div{
+    border: 2px solid blueviolet;
+    background-color: #2a2b2b00;
+    border-radius: 50px;
+    padding: 2rem;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-form .form-info .form-div button{
+    position: relative;
+    width: 240px;
+    min-height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+    border: 1px solid blueviolet;
+    border-radius: 35px;
+    margin: 2.5rem 0;
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-size: 16px;
+}
+
 .body-content .text-content{
     padding: 2rem 3.5rem;
     margin: 1.2rem;
@@ -106,7 +164,7 @@
     width: 50%;
     border-radius: 30px;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .body-content .skills .skills-div{
@@ -114,11 +172,21 @@
     border-radius: 25%;
 }
 
+.body-content .skills .skills-div :hover{
+    background-color: var(--primary-color);
+    border: 1px solid blueviolet;
+    border-radius: 35px;
+    scale: 120%;
+    transition: 0.5s;
+}
+
 .skills img
 {
     height: 150px;
     width: 150px;
+    padding: 1rem;
 }
+
 
 .body-content .projects .projects-div{
     border: 2px solid blueviolet;
@@ -307,6 +375,22 @@
     flex-direction: column;
 }
 
+.form input{
+    background-color: #22222200;
+    border: 1px solid blueviolet;
+    padding: .5rem;
+    border-radius: 25px;
+    margin: .5rem;
+}
+
+.form textarea{
+    background-color: #22222200;
+    border: 1px solid blueviolet;
+    padding: .5rem;
+    border-radius: 15px;
+    margin: .5rem;
+}
+
 @media(max-width:1200px)
 {
     .header-content{
@@ -358,6 +442,24 @@
         .header-content .text-content h1{
             font-size: 2rem;
             line-height: 2rem;
+        }
+
+        .body-content .text-content h1{
+            font-size:2rem;
+            line-height: 2rem;
+        }
+
+        .body-form .text-content h1{
+            font-size:2rem;
+            line-height: 2rem;
+        }
+
+        .header-content .button{
+            width: 200px;
+        }
+
+        .header-content .button .text{
+            font-size: 14px;
         }
     }
     
