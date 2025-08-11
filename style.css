@@ -394,7 +394,7 @@ html{
 }
 
 form input, form textarea{
-    color: plum;
+    color: blueviolet;
 }
 
 @media(max-width:1200px)
